@@ -1,4 +1,5 @@
 import java.util.Scanner;
+import java.util.Arrays;
 public class GithubMetodiharjoituksia {
 
 	public static void main(String[] args) {
@@ -16,6 +17,27 @@ public class GithubMetodiharjoituksia {
 	//kutsu tehtävän 4 metodia
 		pintaAla(10, 5);
 
+	//tulosta tehtävän 5 palautettu arvo
+		System.out.println(pintaAlaPalautus(3, 5));
+	//Jos pinta-ala on isompi kuin 50, tulostetaan: ”Onpa iso huone”
+		if (pintaAlaPalautus(10, 20) > 50)
+			{
+				System.out.println("Onpa iso huone");
+			}
+		
+	//Tee mainissa taulukko ja lisää taulukkoon muutamia sanoja
+		
+		String hedelmat [];
+		hedelmat = new String [5];
+		hedelmat [0] = "banaani";
+		hedelmat [1] = "omena";
+		hedelmat [2] = "greippi";
+		hedelmat [3] = "ananas";
+		hedelmat [4] = "appelsiini";
+				
+	//kutsu tehtävän 6 metodia
+		tulostaTaulukkoLajiteltuna(hedelmat);
+		
 	}// mainin loppu
 	
 	
@@ -54,5 +76,25 @@ public class GithubMetodiharjoituksia {
 		{
 			System.out.println(pituus * leveys);
 		}//pintaAla-metodin loppu
+		
+		
+	//5. Tee metodi, joka laskee pinta-alan, mutta palauttaa arvon.
+		
+		public static int pintaAlaPalautus(int pituus, int leveys)
+		{
+			int pintaAla = pituus * leveys;
+			return pintaAla;
+		}//pintaAlaPalautus-metodin loppu
+		
+		
+	//6.Tee tulostaTaulukkoLajiteltuna-metodi, joka lajittelee taulukon ja tulostaa sanat riveittäin
+		public static void tulostaTaulukkoLajiteltuna (String[] hedelmat)
+		{
+			Arrays.sort(hedelmat);
+			for (int i = 0 ; i < hedelmat.length ; i++)
+			{
+				System.out.println(hedelmat [i]);
+			}
+		}//tulostaTaulukkoLajiteltuna-metodin loppu
 
 }
