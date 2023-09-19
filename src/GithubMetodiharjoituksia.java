@@ -1,5 +1,7 @@
 import java.util.Scanner;
 import java.util.Arrays;
+import java.util.Collections;
+import java.util.ArrayList;
 public class GithubMetodiharjoituksia {
 
 	public static void main(String[] args) {
@@ -38,7 +40,19 @@ public class GithubMetodiharjoituksia {
 	//kutsu tehtävän 6 metodia
 		tulostaTaulukkoLajiteltuna(hedelmat);
 		
+		
+	//Tee mainissa lista ja lisää taulukkoon muutamia sanoja
+		ArrayList<String> marjat = new ArrayList<String>();
+		marjat.add("mustikka");
+		marjat.add("karhunvatukka");
+		marjat.add("vadelma");
+		marjat.add("mustaherukka");
+				
+	//kutsu tehtävän 7 metodia
+		tulostaListaLajiteltuna(marjat);
+		
 	}// mainin loppu
+	
 	
 	
 	//1. Tee metodi, joka tulostaa "Metodi-harjoituksia"
@@ -96,5 +110,16 @@ public class GithubMetodiharjoituksia {
 				System.out.println(hedelmat [i]);
 			}
 		}//tulostaTaulukkoLajiteltuna-metodin loppu
+		
+		
+	//7. Tee yllä oleva tehtävä käyttäen listaa: lajittele lista ja tulosta sanat riveittäin
+		public static void tulostaListaLajiteltuna(ArrayList<String> marjat)
+		{
+			Collections.sort(marjat);
+			for (int i = 0 ; i < marjat.size(); i++)
+			{
+				System.out.println(marjat.get(i));
+			}    
+		}//tulostaListaLajiteltuna-metodin loppu
 
 }
